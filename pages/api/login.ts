@@ -5,16 +5,16 @@ import bcrypt from 'bcrypt';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'POST') {
-    const { email, password } = req.body;
+    const { username, password } = req.body;
 
-    if (!email || !password) {
+    if (!username || !password) {
       return res.status(400).json({ message: 'Por favor, completa todos los campos.' });
     }
 
     const db = await connectToDatabase();
 
     // Verificar si el usuario existe
-    const user = await db.collection('users').findOne({ email });
+    const user = await db.collection('users').findOne({ username });
     if (!user) {
       return res.status(401).json({ message: 'Credenciales inválidas.' });
     }
