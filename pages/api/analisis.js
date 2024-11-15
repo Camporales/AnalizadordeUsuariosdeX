@@ -1,5 +1,4 @@
-import dbConnect from '../../utils/dbConnect'; // Asegúrate de tener una función para conectar a tu base de datos
-import Analisis from '../../models/Analisis'; // Modelo de Mongoose para el análisis
+import dbConnect from '../../utils/dbConnect';
 
 export default async function handler(req, res) {
   await dbConnect();
