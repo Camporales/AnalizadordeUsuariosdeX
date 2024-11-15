@@ -7,8 +7,8 @@ import { ThemeToggle } from './components/ThemeToggle'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Analizador de Usuarios en Redes Sociales',
-  description: 'Analiza usuarios de Facebook y Twitter',
+  title: 'Analizador de Usuarios en la Red Social X',
+  description: 'Analiza usuarios de X',
 }
 
 export default function RootLayout({
